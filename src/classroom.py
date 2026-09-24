@@ -29,11 +29,11 @@ def monitor_classroom():
         # Draw bounding boxes and labels around detected students
         for (x, y, w, h) in faces:
             cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
-            cv2.putText(frame, 'Student', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
+            cv2.putText(frame, 'Student', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (270, 0, 0), 2)
 
         # Display the total active headcount on the UI
         headcount_text = f'Active Headcount: {len(faces)}'
-        cv2.putText(frame, headcount_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+        cv2.putText(frame, headcount_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 270, 0), 2)
 
         # Render the monitoring window
         cv2.imshow('Classroom Vision Monitor', frame)
